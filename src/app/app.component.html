@@ -1,3 +1,62 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><i class="material-icons">favorite_border</i> לחיים - שידוכי מצווה</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a class="contact" href="#">
+                        <span> אודות</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="portfolio" href="#">
+                        <span>הצלחות</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="home" href="#">
+                        <span>מועמדים</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="about" href="#">
+                        <span>מועמדות</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="services" href="#">
+                        <span>מייצגות</span>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="logout()" href="#"><i class="material-icons">exit_to_app</i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="parent">
+    <div class="right">
+        <input ng2-auto-complete #focusable class="form-control" placeholder="חפש מועמדים לשידוך" [source]="users" display-property-name="name"
+            value-property-name=null (valueChanged)="onSelect(this)" (focus)="onFocus(focusable)" />
+    </div>
+</div>
+<br/>
+<ul>
+    <li class="person-item" *ngFor="let user of users">
+         {{user.name}} <b> (</b><span>Age: {{user.age}}</span><b>)</b>
+        <div><span>{{user.email}}</span><img src="{{user.avatar}}" /></div>
+    </li>
+</ul>
+<!-- <div class="fixed-action-btn horizontal center">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>-->
