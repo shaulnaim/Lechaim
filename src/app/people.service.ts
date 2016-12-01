@@ -21,4 +21,10 @@ export class peopleService {
                    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
 
      }
+     getSpecific(id){
+         return this.http.get('http://localhost:3000/people?id='+id)
+                   .map((res) => res.json())
+                   .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+          
+     }
 }

@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
-import { AuthenticationService } from './loginComponent/authentication.service'
-import { peopleService } from './http.service'
+import { AuthenticationService } from '../loginComponent/authentication.service'
+import { peopleService } from '../people.service'
 
 @Component({
-    selector: 'login-form',
+    selector: 'candidates',
     providers: [AuthenticationService, peopleService],
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    templateUrl: './candidates.comonent.html',
+    styleUrls: ['./candidates.component.scss'],
+    inputs: ['users']
 })
 
-export class HomeComponent {
+export class CandidatesComponent {
 
     constructor(
         private _service: AuthenticationService, private peopleService: peopleService) { }
 
     private users;
+    isDetailed = false;
     model = { "id": 0, "age": 27, "name": "Jo Sanford", "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/jonkspr/128.jpg" }
     ngOnInit() {
         this._service.checkCredentials();
@@ -33,5 +35,11 @@ export class HomeComponent {
     }
     json(obj) {
         return JSON.stringify(obj);
+    }
+    enterFullDetails() {
+        console.log("dwsdwd");
+    }
+    cancelDetailed() {
+        console.log("cancell");
     }
 }

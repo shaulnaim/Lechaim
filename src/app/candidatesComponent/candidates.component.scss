@@ -1,0 +1,84 @@
+.card {
+  background: rgba(210, 158, 121, 0.65);
+  min-height: 160px;
+  width: 100%;
+  &:nth-child(1) {
+    margin-top: 30px;
+  }
+  &.active {
+    background: #24262c;
+  }
+  &:hover {
+      background-color:#b77555;
+  }
+  
+  .button {
+    background: #37b3b9;
+    border-radius: 3px;
+    text-shadow: 3px 3px 9px black;
+    border: 0;
+    color: #ffffff;
+    width: 120px;
+  }
+
+  .button-cancel {
+    background: none;
+    border: 0;
+    color: #fd79fc;
+    text-decoration: underline;
+    width: 120px;
+  }
+
+  .date, .price {
+    color: #9397d8;
+  }
+
+  .description {
+    color: #66d9f7;
+  }
+
+  .panel-body {
+    display: table;
+    padding: 0;
+    width: 100%;
+  }
+
+  .photo {
+    float: left;
+    margin-right: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .price {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    width: 120px;
+  }
+
+  .user-info {
+    display: table-cell;
+    vertical-align: middle;
+    & h3 {
+      margin: 0 0;
+      text-shadow: -4px 3px 4px rgba(0, 0, 0, 0.38);
+      a {
+        color: rgba(84, 46, 47, 0.91);
+      }
+      
+    }
+
+    & p {
+    text-align: center;
+    }
+
+    & tbody, & tr, & td {
+      width: 100%;
+    }
+
+    & tbody {
+      display: inline-block;
+    }
+  }
+}
