@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {AuthenticationService, User} from './authentication.service'
-
+import {AuthenticationService, User} from './authentication.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 @Component({
     selector: 'login-form',
     providers: [AuthenticationService],
@@ -14,11 +14,15 @@ export class LoginComponent {
     public errorMsg = '';
 
     constructor(
+        private router: Router,
         private _service:AuthenticationService) {}
 
     login() {
         if(!this._service.login(this.user)){
             this.errorMsg = 'פרטי כניסה שגויים';
         }
+    }
+    signup() {
+        this.router.navigate(['/representorsSignup']);
     }
 }

@@ -3,28 +3,17 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo shadow"><i class="material-icons">favorite_border</i> לחיים - שידוכי מצווה</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
+                <li (click)="active = !active;">
                     <a class="contact" href="#">
                         <span> אודות</span>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio" href="#">
-                        <span>הצלחות</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="home" href="#">
+                <li (click)="active = !active;">
+                    <a [routerLink]="['/Candidates']" class="home active" href="#">
                         <span>מועמדים</span>
                     </a>
                 </li>
-
-                <li>
-                    <a class="about" href="#">
-                        <span>מועמדות</span>
-                    </a>
-                </li>
-                <li>
+                <li (click)="active = !active;">
                     <a class="services" href="#">
                         <span>מייצגות</span>
                     </a>

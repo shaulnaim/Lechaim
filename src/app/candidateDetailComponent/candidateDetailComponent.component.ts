@@ -9,11 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./candidateDetailComponent.component.scss']
 })
 export class CandidateDetailComponent implements OnInit, OnDestroy {
+  private sub: any;
   id: number;
 
-  private sub: any;
+  
 
-  constructor(private peopleService: peopleService, private route: ActivatedRoute) { }
+constructor(private peopleService: peopleService, private route: ActivatedRoute) { }
   private user;
   
   ngOnInit() {
@@ -24,10 +25,8 @@ export class CandidateDetailComponent implements OnInit, OnDestroy {
 
     this.peopleService.getSpecific(this.id)
       .subscribe(data => {
-        this.user = data
-        });
-       
-     
+        this.user = data;
+      });
   }
   ngOnDestroy() {
     this.sub.unsubscribe();

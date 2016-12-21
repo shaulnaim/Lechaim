@@ -1,8 +1,12 @@
 .card {
     background: rgba(210, 158, 121, 0.65);
-    text-align: right;
+    text-align: center;
     .btn-flat {
         text-shadow: -1px 3px 9px black;
-            color: #ffab40;
+        color: #ffab40;
+    }
+    p {
+      width: 800px;
+      margin-left: 15%;   
     }
 }

@@ -9,6 +9,7 @@ import { routing } from './app.component';
 import { AppComponent } from './app.component';
 import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 import { CandidateDetailComponent } from './candidateDetailComponent/candidateDetailComponent.component';
+import { RepresentorsSignupComponent } from './representors-signup/representors-signup.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CandidateDetailComponent } from './candidateDetailComponent/candidateDe
     LoginComponent,
     CandidatesComponent,
     AppComponent,
-    CandidateDetailComponent
+    CandidateDetailComponent,
+    RepresentorsSignupComponent
   ],
   imports: [
     BrowserModule,

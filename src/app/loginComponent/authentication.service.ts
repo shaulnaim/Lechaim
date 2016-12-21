@@ -20,10 +20,11 @@ export class AuthenticationService {
     this._router.navigate(['Login']);
   }
 
-  login(user){
+  login(user) {
     var users = [
       new User('admin@admin.com','admin'),
-      new User('user1@gmail.com','a23')
+      new User('user1@gmail.com','a23'),
+      new User('shaul@tikal.com','shaul'),
     ];
     var authenticatedUser = users.find(u => u.email === user.email);
     if (authenticatedUser){
@@ -32,10 +33,9 @@ export class AuthenticationService {
       return true;
     }
     return false;
-
   }
 
-   checkCredentials( ){
+   checkCredentials() {
     if (localStorage.getItem("user") === null){
         this._router.navigate(['Login']);
     }
