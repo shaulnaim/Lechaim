@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="parent">
+    <div class="right">
+        <input ng2-auto-complete #focusable id="searchInput" class="form-control mb-2 mr-sm-2 mb-sm-0 search-input" [(ngModel)]="selected" placeholder="חפש מועמדים לשידוך"
+            display-property-name="name" [source]="users" no-match-found-text="No Match Found" list-formatter="(age) name" max-num-list="5"
+            (valueChanged)="onSelect(this,focusable)" min-chars="1" />
+        <!--<br/>selected model4: {{//selected}}<br/><br/>-->
+    </div>
+</div>
+<br/>
+<ul class="list-group">
+    <li *ngFor="let user of users">
+        <div class="panel panel-default">
+            <section >
+                <a [routerLink]="['/Candidates', user.id]">
+                    <div class="panel-body">
+                        <div class="photo">
+                            <img [src]="user.avatar">
+                        </div>
+                        <div class="user-info">
+                            <div>
+                                <h1>{{user.name}}</h1>
+                                <h4>Age: {{user.age}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </section>
+        </div>
+    </li>
+</ul>

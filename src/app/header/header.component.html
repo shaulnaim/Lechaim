@@ -1,0 +1,40 @@
+<header>
+    <div class="container ">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar5">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                    <div class="brand-img"></div>
+                </div>
+                <div id="navbar5" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li [class.hide]="hide==true" [class.active]="active=='about'" (click)="menuClick('about')"><a href="#">אודות</a></li>
+                        <li><a href="#">צור קשר</a></li>
+                        <li [class.hide]="hide" [class.active]="active=='candidates'" (click)="menuClick('candidates')">
+                            <a [routerLink]="['/Candidates']" class="home active" href="#">
+                                <span><i class="fa fa-users" aria-hidden="true"></i> מועמדים</span>
+                            </a>
+                        </li>
+                        <li [class.hide]="hide==true" [class.active]="active=='representors'" (click)="menuClick('representors')">
+                            <a [routerLink]="['/Candidates']" class="services" href="#">
+                                <span><i class="fa fa-users" aria-hidden="true"></i> מייצגות</span>
+                            </a>
+                        </li>
+                        <li title="logout" [class.hide]="hide==true">
+                            <a (click)="doLogout()" href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+
+    </div>
+</header>
