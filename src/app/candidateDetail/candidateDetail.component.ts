@@ -7,25 +7,15 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './candidateDetail.component.html',
   styleUrls: ['./candidateDetail.component.scss']
 })
-export class CandidateDetailComponent implements OnInit, OnDestroy {
+
+export class CandidateDetailComponent implements OnInit {
   private sub: any;
-  id: number;
-
+  user: any;
   constructor(private PeopleService: PeopleService, private route: ActivatedRoute) { }
-  private user;
-
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-      this.id = +params['id'];
-    });
-
-    this.PeopleService.getSpecific(this.id)
+    this.PeopleService.getSpecific(this.route.snapshot.params['id'])
       .subscribe(data => {
         this.user = data;
       });
   }
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
-
 }
