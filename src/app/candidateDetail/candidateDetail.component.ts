@@ -9,13 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class CandidateDetailComponent implements OnInit {
-  private sub: any;
   user: any;
   constructor(private PeopleService: PeopleService, private route: ActivatedRoute) { }
+
   ngOnInit() {
     this.PeopleService.getSpecific(this.route.snapshot.params['id'])
       .subscribe(data => {
         this.user = data;
       });
   }
+
 }
