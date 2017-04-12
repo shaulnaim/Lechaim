@@ -32,8 +32,8 @@ export class RepresentorsSignupComponent implements OnInit {
   validationMessages = {
     name: {
       required: 'Name is required.',
-      minlength: 'Name must be 3 characters.',
-      maxlength: 'Name can\'t be longer than 6 characters.'
+      minlength: 'Name must be at least 3 characters.',
+      maxlength: 'Name can\'t be longer than 8 characters.'
     },
     email: {
       required: 'email is required.',
@@ -106,7 +106,14 @@ export class RepresentorsSignupComponent implements OnInit {
 
 
   processForm() {
-     this.peopleService.adduser(this.form.value).subscribe(
+    debugger;
+        for (let control in this.form.controls) {
+            this.form.controls[control].markAsDirty();
+        };
+
+        if (this.form.dirty && this.form.valid) {
+            // My submit logic
+            this.peopleService.adduser(this.form.value).subscribe(
                data => {
                  this.issuccess=true;
                  window.setTimeout(() => this.router.navigate(['Login']), 2000);
@@ -115,7 +122,10 @@ export class RepresentorsSignupComponent implements OnInit {
                  this.iserror=true;
                  console.log(err)
                }
-    );
+            );
+        } else {
+           this.iserror=true;
+        }
+     
   }
-
 }

@@ -11,7 +11,7 @@
             <strong>Success!</strong> signup was succesful. you are redirected to Login
         </div>
         <div [class.hide-alert]="!iserror" class="alert alert-danger">
-            <strong>Danger!</strong> error was occured
+            <strong>Check your data ! </strong> error was occured
         </div>
         <div class="content-container">
             <div class="form-group">
@@ -55,9 +55,9 @@
             <div class="form-group">
                 <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
                 <div class="col-sm-9">
-                    <input type="date" id="birthDate" class="form-control">
-                    <span class="help-block" *ngIf="formErrors.name">
-                             {{ formErrors.name }}
+                    <input type="date" id="birthDate" class="form-control" formControlName="birthDate">
+                    <span class="help-block" *ngIf="formErrors.birthDate">
+                             {{ formErrors.birthDate }}
                         </span>
                 </div>
             </div>
@@ -111,7 +111,7 @@
             <!-- /.form-group -->
             <div class="form-group">
                 <div class="col-sm-9 col-sm-offset-3">
-                    <button type="submit" class="btn  btn-sample btn-block">Register</button>
+                    <button type="submit"  class="btn  btn-sample btn-block">Register</button>
                 </div>
             </div>
         </div>
