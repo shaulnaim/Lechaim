@@ -8,6 +8,7 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
 import { HeaderComponent } from '../header/header.component';
 import { ROUTES } from '../app.routes';
 import { RouterModule } from '@angular/router';
+import { SharedDataService  } from './shared.service';
 
 @NgModule({
     imports: [
@@ -23,6 +24,7 @@ import { RouterModule } from '@angular/router';
         HeaderComponent
     ],
     providers: [
+        SharedDataService
     ],
     exports: [
         RouterModule,

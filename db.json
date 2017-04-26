@@ -172,7 +172,7 @@
       "id": 24,
       "age": 26,
       "name": "Crawford Grant",
-      "representative": "liat naim",
+      "representative": "maayan",
       "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/alexandermayes/128.jpg"
     },
     {
@@ -337,29 +337,11 @@
       "age": 34,
       "name": "Jack Klocko",
       "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/_dwite_/128.jpg"
-    },
-    {
-      "name": "benny",
-      "email": "benny@benny.com",
-      "password": "1qa2ws3e",
-      "confirm": "1qa2ws3e",
-      "birthDate": "",
-      "acceptence": "",
-      "id": 50
-    },
-    {
-      "name": "wewre",
-      "email": "qwr@g.com",
-      "password": "12121212",
-      "confirm": "12121212",
-      "birthDate": "",
-      "acceptence": "",
-      "id": 51
     }
   ],
   "representatives": [
     {
-      "name": "shaul",
+      "name": "shaul naim",
       "email": "admin@admin.com",
       "password": "admin",
       "region": "Gush dan",
@@ -368,7 +350,7 @@
       "id": 0
     },
     {
-      "name": "liat",
+      "name": "liat naim",
       "email": "liat@naim.com",
       "password": "liatnaim",
       "confirm": "liatnaim",

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PeopleService } from '../../services/people.service';
 import { ActivatedRoute } from '@angular/router';
+import { SharedDataService  } from '../../shared/shared.service';
 
 @Component({
   selector: 'app-representative-details',
@@ -9,14 +10,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class RepresentativeDetailsComponent implements OnInit {
-  representative: any;
-  constructor(private PeopleService: PeopleService, private route: ActivatedRoute) { }
+  representative: string;
+  representativeName: string;
+  constructor(private SharedDataService:SharedDataService,private PeopleService: PeopleService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.PeopleService.getSpecificRepresentative(this.route.snapshot.params['id'])
       .subscribe(data => {
         this.representative = data;
+        this.representativeName = data[0].name;
+        this.SharedDataService.setRepresentative(this.representativeName);
       });
+      
   }
 
 }
