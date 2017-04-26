@@ -3,12 +3,12 @@ import { PeopleService } from '../services/people.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-candidateDetail',
-  templateUrl: './candidateDetail.component.html',
-  styleUrls: ['./candidateDetail.component.scss']
+  selector: 'app-candidate-details',
+  templateUrl: './candidate-details.component.html',
+  styleUrls: ['./candidate-details.component.scss']
 })
 
-export class CandidateDetailComponent implements OnInit {
+export class CandidateDetailsComponent implements OnInit {
   user: any;
   constructor(private PeopleService: PeopleService, private route: ActivatedRoute) { }
 

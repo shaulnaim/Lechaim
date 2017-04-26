@@ -24,9 +24,15 @@ export class PeopleService {
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
 
     }
-    getUsers() {
+    getRepresentatives() {
         // ...using get request
-        return this.http.get(Const.BASE_URL + 'users')
+        return this.http.get(Const.BASE_URL + 'representatives')
+            .map((res) => res.json())
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+
+    }
+     getSpecificRepresentative(id) {
+        return this.http.get(Const.BASE_URL + 'representatives?id=' + id)
             .map((res) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
 
@@ -34,7 +40,7 @@ export class PeopleService {
     adduser(data: Object) {
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.post(Const.BASE_URL + 'users', JSON.stringify(data), { headers })      //added return
+        return this.http.post(Const.BASE_URL + 'representatives', JSON.stringify(data), { headers })      //added return
             .map(res => res.json())
 
     }

@@ -20,7 +20,9 @@
                         <div class="user-info">
                             <div>
                                 <h1>{{user.name}}</h1>
-                                <h4>Age: {{user.age}}</h4>
+                                <h3>Age: {{user.age}}</h3>
+                                <h4 *ngIf="user.representative">representative : {{user.representative}}</h4>
+                                
                             </div>
                         </div>
                     </div>

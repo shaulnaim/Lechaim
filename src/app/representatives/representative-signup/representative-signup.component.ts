@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
-import { validateEmail, matchingPasswords, mustBeChecked } from '../validators/validators';
-import { PeopleService } from '../services/people.service';
+import { validateEmail, matchingPasswords, mustBeChecked } from '../../validators/validators';
+import { PeopleService } from '../../services/people.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-representors-signup',
-  templateUrl: './representors-signup.component.html',
-  styleUrls: ['./representors-signup.component.scss']
+  selector: 'app-representative-signup',
+  templateUrl: './representative-signup.component.html',
+  styleUrls: ['./representative-signup.component.scss']
 })
 
-export class RepresentorsSignupComponent implements OnInit {
+export class RepresentativeSignupComponent implements OnInit {
  private issuccess = false;
  private iserror = false;
    constructor(
@@ -107,11 +107,11 @@ export class RepresentorsSignupComponent implements OnInit {
 
   processForm() {
     debugger;
-        for (let control in this.form.controls) {
-            this.form.controls[control].markAsDirty();
-        };
+        // for (let control in this.form.controls) {
+        //     this.form.controls[control].markAsDirty();
+        // };
 
-        if (this.form.dirty && this.form.valid) {
+        // if (this.form.dirty && this.form.valid) {
             // My submit logic
             this.peopleService.adduser(this.form.value).subscribe(
                data => {
@@ -123,9 +123,9 @@ export class RepresentorsSignupComponent implements OnInit {
                  console.log(err)
                }
             );
-        } else {
-           this.iserror=true;
-        }
+        // } else {
+        //    this.iserror=true;
+        // }
      
   }
 }

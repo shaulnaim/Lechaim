@@ -1,15 +1,14 @@
 import { LoginComponent } from './login/login.component';
 import { CandidatesComponent } from './candidates/candidates.component';
-import {RepresentorsSignupComponent} from './representors-signup/representors-signup.component';
-import { CandidateDetailComponent } from './candidateDetail/candidateDetail.component';
+import { CandidateDetailsComponent } from './candidate-details/candidate-details.component';
 import { Routes } from '@angular/router';
 
-export const ROUTES : Routes = [
-    { path:'representorsSignup',component: RepresentorsSignupComponent},
+export const ROUTES: Routes = [
     { path: 'Candidates', component: CandidatesComponent },
-    { path: 'Candidates/:id', component: CandidateDetailComponent },
+    { path: 'Candidates/:id', component: CandidateDetailsComponent },
     { path: 'Login', component: LoginComponent },
+    { path:'representative', loadChildren: './representatives/representatives.module#representatives'},
     { path: '', redirectTo: '/Login', pathMatch: 'full' },
     { path: '**', redirectTo: 'home' }
-    
+
 ];

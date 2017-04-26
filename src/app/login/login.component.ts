@@ -29,6 +29,6 @@ export class LoginComponent {
         }
     }
     doSignup() {
-        this.router.navigate(['/representorsSignup']);
+        this.router.navigate(['/representative/RepresentativeSignup']);
     }
 }

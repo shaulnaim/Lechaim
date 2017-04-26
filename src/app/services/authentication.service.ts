@@ -23,7 +23,7 @@ export class AuthenticationService {
   }
 
   doLogin(user) {
-    this.peopleService.getUsers()
+    this.peopleService.getRepresentatives()
             .subscribe((data) => {
                 USERS = data;
             });

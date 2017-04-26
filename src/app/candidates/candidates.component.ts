@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { PeopleService } from '../services/people.service';
 import { HeaderComponent } from '../header/header.component'
@@ -10,7 +10,7 @@ import { HeaderComponent } from '../header/header.component'
     inputs: ['users']
 })
 
-export class CandidatesComponent {
+export class CandidatesComponent implements OnInit {
     //public hide = false;
     constructor(
         private authenticationService: AuthenticationService,
