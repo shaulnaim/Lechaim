@@ -13,19 +13,19 @@
                 </div>
                 <div id="navbar5" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li [class.hide]="hide==true" [class.active]="active=='about'" (click)="menuClick('about')"><a href="#">אודות</a></li>
+                        <li [class.hide]="hide==true"  (click)="menuClick('about')"><a href="#">אודות</a></li>
                         <li><a href="#">צור קשר</a></li>
-                        <li [class.hide]="hide" [class.active]="active=='candidates'" (click)="menuClick('candidates')">
-                            <a [routerLink]="['/Candidates']" class="home active" href="#">
+                        <li [class.hide]="hide==true"  (click)="menuClick('candidates')">
+                            <a [routerLink]="['/Candidates']" routerLinkActive="active" class="home" href="#">
                                 <span><i class="fa fa-users" aria-hidden="true"></i> מועמדים</span>
                             </a>
                         </li>
-                        <li [class.hide]="hide==true" [class.active]="active=='representatives'" (click)="menuClick('representatives')">
-                            <a [routerLink]="['/representative/Representatives']" class="services" href="#">
+                        <li [class.hide]="hide==true" (click)="menuClick('representatives')">
+                            <a [routerLink]="['/representative/Representatives']" routerLinkActive="active" class="services" href="#">
                                 <span><i class="fa fa-users" aria-hidden="true"></i> מייצגות</span>
                             </a>
                         </li>
-                        <li title="logout" [class.hide]="hide==true">
+                        <li title="logout">
                             <a (click)="doLogout()" href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a>
                         </li>
                         

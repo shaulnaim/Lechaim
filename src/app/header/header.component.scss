@@ -4,11 +4,10 @@ header {
    .container {
      width: 100%;
    }
-   li:hover,
-   li:visited,
-   .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
-   {
-      background-color: saddlebrown;
+   
+   li > a.active {
+     background-color: saddlebrown;
+     color:#222;
    }
     nav {
       background: $main-brown-color;

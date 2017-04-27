@@ -6,7 +6,6 @@ import { SharedDataService } from '../shared/shared.service';
 
 
 @Component({
-    selector: 'candidates',
     templateUrl: './candidates.component.html',
     styleUrls: ['./candidates.component.scss'],
     inputs: ['users']
