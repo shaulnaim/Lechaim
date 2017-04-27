@@ -11,7 +11,7 @@
 <h2>{{representative}}</h2>
 <ul class="list-group">
     <li *ngFor="let user of users">
-            <div class="panel panel-default" *ngIf="!representative||user.representative == representative">
+            <div class="panel panel-default" [hidden]="representative && user.representative != representative">
                 <section>
                     <a [routerLink]="['/Candidates', user.id]">
                         <div class="panel-body">
