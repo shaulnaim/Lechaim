@@ -13,20 +13,20 @@
                 </div>
                 <div id="navbar5" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li [class.hide]="hide==true"  (click)="menuClick('about')"><a href="#">אודות</a></li>
+                        <li [class.hide]="hide==true"  (click)="changeRoute('about')"><a href="#">אודות</a></li>
                         <li><a href="#">צור קשר</a></li>
-                        <li [class.hide]="hide==true"  (click)="menuClick('candidates')">
+                        <li [class.hide]="hide==true"  (click)="changeRoute('/Candidates')">
                             <a [routerLink]="['/Candidates']" routerLinkActive="active" class="home" href="#">
                                 <span><i class="fa fa-users" aria-hidden="true"></i> מועמדים</span>
                             </a>
                         </li>
-                        <li [class.hide]="hide==true" (click)="menuClick('representatives')">
+                        <li [class.hide]="hide==true" (click)="changeRoute('/representative/Representatives')">
                             <a [routerLink]="['/representative/Representatives']" routerLinkActive="active" class="services" href="#">
                                 <span><i class="fa fa-users" aria-hidden="true"></i> מייצגות</span>
                             </a>
                         </li>
                         <li title="logout">
-                            <a (click)="doLogout()" href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a>
+                            <a (click)="resetRepresentative();doLogout()" href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a>
                         </li>
                         
                     </ul>

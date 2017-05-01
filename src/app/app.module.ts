@@ -10,8 +10,8 @@ import { AppComponent } from './app.component';
 import { CandidateDetailsComponent } from './candidate-details/candidate-details.component';
 import { AuthenticationService } from './services/authentication.service';
 import { PeopleService } from './services/people.service';
-
-
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { dummyComponent } from './dummy/dummy.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,8 @@ import { PeopleService } from './services/people.service';
     CandidatesComponent,
     AppComponent,
     CandidateDetailsComponent,
+    SearchFilterPipe,
+    dummyComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES, { useHash: true }),

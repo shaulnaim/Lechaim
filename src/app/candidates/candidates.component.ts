@@ -25,8 +25,8 @@ export class CandidatesComponent implements OnInit {
     private representative;
     ngOnInit() {
         this.authenticationService.checkCredentials();
-        debugger
         this.representative = this.SharedDataService.getRepresentative();
+      //  alert(this.representative)
         this.peopleService.getMyData()
         .subscribe((data) => {
             this.users = data;
