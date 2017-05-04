@@ -13,11 +13,16 @@
                 </div>
                 <div id="navbar5" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li [class.hide]="hide==true"  (click)="changeRoute('about')"><a href="#">אודות</a></li>
+                        <li [class.hide]="hide==true" (click)="changeRoute('about')"><a href="#">אודות</a></li>
                         <li><a href="#">צור קשר</a></li>
-                        <li [class.hide]="hide==true"  (click)="changeRoute('/Candidates')">
+                        <li [class.hide]="hide==true" (click)="changeRoute('/Candidates')">
                             <a [routerLink]="['/Candidates']" routerLinkActive="active" class="home" href="#">
                                 <span><i class="fa fa-users" aria-hidden="true"></i> מועמדים</span>
+                            </a>
+                        </li>
+                        <li [class.hide]="hide==true" (click)="changeRoute('/CreateCandidate')">
+                            <a [routerLink]="['/CreateCandidate']" routerLinkActive="active" class="home" href="#">
+                                <span><i class="fa fa-user" aria-hidden="true"></i> הוסף מועמד</span>
                             </a>
                         </li>
                         <li [class.hide]="hide==true" (click)="changeRoute('/representative/Representatives')">
@@ -28,7 +33,7 @@
                         <li title="logout">
                             <a (click)="resetRepresentative();doLogout()" href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a>
                         </li>
-                        
+
                     </ul>
                 </div>
                 <!--/.nav-collapse -->

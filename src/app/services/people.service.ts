@@ -44,4 +44,11 @@ export class PeopleService {
             .map(res => res.json())
 
     }
+     addCandidate(data: Object) {
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post(Const.BASE_URL + 'people', JSON.stringify(data), { headers })      //added return
+            .map(res => res.json())
+
+    }
 }

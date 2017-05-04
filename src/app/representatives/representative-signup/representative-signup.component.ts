@@ -6,7 +6,7 @@ import { PeopleService } from '../../services/people.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-representative-signup',
+  selector: 'representative-signup',
   templateUrl: './representative-signup.component.html',
   styleUrls: ['./representative-signup.component.scss']
 })
@@ -107,7 +107,6 @@ export class RepresentativeSignupComponent implements OnInit {
 
   processForm() {
     debugger;
-        // for (let control in this.form.controls) {
         //     this.form.controls[control].markAsDirty();
         // };
 

@@ -4,6 +4,7 @@ import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CandidatesComponent } from './candidates/candidates.component';
+import { CreateCandidateComponent } from './create-candidate/create-candidate.component';
 import { LoginComponent } from './login/login.component';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { dummyComponent } from './dummy/dummy.component';
   declarations: [
     LoginComponent,
     CandidatesComponent,
+    CreateCandidateComponent,
     AppComponent,
     CandidateDetailsComponent,
     SearchFilterPipe,
